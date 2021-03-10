@@ -17,10 +17,10 @@ body {
     background-size: cover;
 }
 
-.container {
+.mainBox {
     width: 800px;
-    max-width: 80%;
-    height: 80%;
+    max-width: 75%;
+    height: 90%;
     background-color: white;
     padding: 15px;
     border-radius: 5px;
@@ -30,9 +30,9 @@ body {
 .plain {
     display: flex;
     flex-direction: column;
-    background-color: rgb(1, 63, 63);
+    background-color: rgb(204, 207, 207);
     border: 2px solid rgb(1, 58, 4);
-    height: 40%;
+    height: 30%;
 }
 div.plain > p {
     text-align: center;
@@ -40,10 +40,7 @@ div.plain > p {
     color: cornsilk;
     margin: 5px;
 }
-.pTxt{
-    height: 100%
-    
-}
+
 .buttons {
     background-color: burlywood;
     margin: 10px;
