@@ -1,51 +1,33 @@
-*,*::before, *::after {
-    box-sizing: border-box;
-}
-
 body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
     background-image: url('../pics/crypt.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.container {
+.mainBox {
     width: 800px;
-    max-width: 80%;
-    height: 80%;
+    max-width: 75%;
+    height: 95%;
     background-color: white;
-    padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
 }
 
-.plain {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(1, 63, 63);
+.boxes {
+    background-color: rgb(204, 207, 207);
+    height: 30%;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.buttonsBox {
+    background-color: rgb(95, 204, 180);
+}
+
+.borderStyle {
     border: 2px solid rgb(1, 58, 4);
-    height: 40%;
-}
-div.plain > p {
-    text-align: center;
-    font-size: large;
-    color: cornsilk;
-    margin: 5px;
-}
-.pTxt{
-    height: 100%
-    
-}
-.buttons {
-    background-color: burlywood;
-    margin: 10px;
-    padding: 3px;
+    border-radius: 5px;
 }

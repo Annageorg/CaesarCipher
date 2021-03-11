@@ -2,28 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,
-            initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/
-        css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/
-        Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+        crossorigin="anonymous">
         <title>Ceasar Cypher</title>
         <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
-    <body>
-        <div class="container">
-            <div class="plain">
-                <p>Plaintext</p>
-                <input  type="text" class="pTxt" id ="plainTxt">
+    <body class="p-0 mx-auto d-flex flex-direction-column justify-content-center align-items-center vw-100 vh-100">    
+        <div class="mainBox p-3">
+            <h4>Plain-text</h4>
+            <div class="boxes borderStyle">                
+                <div> 
+                    <input  type="text" class="inputBox w-100" 
+                    placeholder="Type text here to encrypt" id="pText">
+                </div>
+                <div> 
+                    <p id="plainText" class="p-2"></p> 
+                </div>
             </div>
-            <div class="buttons">
-                <span>Shift:</span>
-                <select class="form-select form-select-sm" 
-                aria-label=".form-select-sm example" id="keys">
-                    <option selected>Select your key here</option>
+            <div class="buttonsBox borderStyle m-1 mt-2 p-1">
+                <span>Scroll to select your key</span>
+                <select id="keys" class="form-select mb-1 mt-1" size="2">
+                    <!-- <option selected>Select your key here</option> -->
                     <option value="0"> 0 </option>
                     <option value="1"> 1 </option>
                     <option value="2"> 2 </option>
@@ -52,27 +56,36 @@
                     <option value="25"> 25 </option>
                 </select>
                 <span>
-                    <button type="button" class="btn btn-success">
+                    <button type="button" class="btn btn-success p-1 m-1"
+                    onclick="encode()">
                         &#8643; encrypt &#8642;
                     </button>
-                    <button type="button" class="btn">
+                    <button type="button" class="btn btn-warning p-1"
+                    onclick="decode()">
                         &#8639; decrypt &#8638;
                     </button>
                 </span>
             </div>
-            <div class="plain">
-                <p>Ciphertext</p>
-                <input  type="text" class="pTxt" id ="ccTxt">
+            <h4>Cipher-text</h4>
+            <div class="boxes borderStyle">                
+                <div> <input type="text" class="inputBox w-100" 
+                    placeholder="Type text here to decrypt" id ="cText"></div>
+                <div> 
+                    <p id="cipheredText" class="p-2"></p> 
+                </div>
+ 
             </div>
         </div>        
         
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd
-        /popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2
-        lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/
-        dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAF
-        LuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="cypher.js"></script>
+        <!-- Scripts Bootstrap JS & JS -->
+        <script 
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" 
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" 
+        crossorigin="anonymous"></script>
+        <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" 
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" 
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="cipher.js"></script>
     </body>
 </html>

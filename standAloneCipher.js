@@ -3,10 +3,12 @@
 // [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
 // [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]
 
-
-// let key = document.getElementById("keys").selectedIndex.value;
-// let str = document.getElementById("plainTxt").value
-// document.getElementById("ccTxt").innerHTML = message;
+const str="xyz"
+const key=1
+console.log(encode(str, key))
+const str1="yza"
+const key1=1
+console.log(decode(str1, key1))
 
 function encode (str, key){
     let message = "";
@@ -55,7 +57,3 @@ function decode (str, key){
     }
     return message;
 }
-
-
-
-
